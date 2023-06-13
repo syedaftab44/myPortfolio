@@ -262,22 +262,6 @@ a:hover #line1{
 }
 
 @media(max-width:767px){
-
- .fa-bars:before {
-  margin-right: 3vw;
-  font-size: 7vw;
-}
-.fa, .fas {
-  margin-top: 10vw;
-}
-.navbar .logo a {
-  margin-left: 3vw;
-  font-size: 27px;
-}
-.logo{
-  margin-top: 10vw;
-
-}
 .textdiv {
     height: 50%;
 }

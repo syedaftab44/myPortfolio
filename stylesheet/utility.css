@@ -100,7 +100,6 @@ body {
      width: 0%;
      border-bottom: 4px solid #fff;
      margin-left: 25px;
-   
    }
 
 
@@ -161,6 +160,9 @@ body {
    }
 
    @media(max-width:767px){
+    .navbar {
+      height: 81px;
+  }
     .fa-bars:before {
      margin-right: 2vw;
      font-size: 7vw;
@@ -177,8 +179,7 @@ body {
      padding: 1vw;
    
    }
-   .line{
-   display: none;
-    
-   }
+   .textline .line {
+    margin-left: 148px;
+}
   }
