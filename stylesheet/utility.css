@@ -1,0 +1,175 @@
+@font-face {
+  font-family: montreal;
+  src: url(./PPNeueMontreal-Medium.f9b3b92f\ \(2\).ttf);
+}
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: montreal;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+#main {
+    width: 100%;
+}
+
+ 
+.content{
+    padding: 0 2vw;
+   }
+   .navbar{
+     position: fixed;
+     width: 100%;
+     z-index: 2;
+     padding: 1.5vw 0;
+     transition: all 0.3s ease;
+     background-color: #000;
+   }
+   .navbar.sticky{
+     background: #1b1b1b;
+     padding: 10px 0;
+     box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+   }
+   .navbar .content{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+   }
+   .navbar .logo a{
+     color: #fff;
+     font-size: 30px;
+     font-weight: 600;
+     text-decoration: none;
+   }
+   .navbar .menu-list{
+     display: inline-flex;
+   }
+   .menu-list li{
+     list-style: none;
+   }
+   .menu-list li a{
+     color: #fff;
+     font-size: 1.5vw;
+     font-weight: 600;
+     margin-left: 25px;
+     /* padding: 0 1vw; */
+   
+     text-decoration: none;
+     transition: all 0.3s ease;
+   }
+   .menu-list h3{
+   
+       font-size: 1.5vw;
+       color: #fff;
+       font-weight: 600;
+       padding: 0 2vw;
+   }
+   
+   #middle{
+       display: flex;
+       align-items: center;
+       /* background-color: #000; */
+   }
+   .icon{
+     color: #fff;
+     font-size: 20px;
+     cursor: pointer;
+     display: none;
+   }
+   .menu-list .cancel-btn{
+     position: absolute;
+     right: 30px;
+     top: 20px;
+   }
+   .textline{
+     position: relative;
+     width: fit-content;
+     height: fit-content;
+     overflow: hidden;
+   }
+   
+   .textline .line {
+     position: relative;
+     width: 0%;
+     border-bottom: 4px solid #fff;
+     margin-left: 25px;
+   
+   }
+
+
+
+
+
+   
+   
+   @media (max-width: 868px) {
+     body.disabled{
+       overflow: hidden;
+     }
+     .icon{
+       display: block;
+     }
+     .icon.hide{
+       display: none;
+     }
+     .navbar .menu-list{
+       position: fixed;
+       z-index: 9999;
+       height: 100vh;
+       width: 100%;
+       max-width: 400px;
+       left: -100%;
+       top: 0px;
+       display: block;
+       padding: 40px 0;
+       text-align: center;
+       background: #222;
+       transition: all 0.3s ease;
+       
+     }
+     .navbar.show .menu-list{
+       left: 0%;
+     }
+     .navbar .menu-list li{
+       margin-top: 45px;
+     }
+     .navbar .menu-list li a{
+       font-size: 23px;
+       margin-left: -100%;
+       transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+     }
+     .navbar.show .menu-list li a{
+       margin-left: 150px;
+     }
+   }
+   @media (max-width: 380px) {
+     /* .navbar .logo a{
+      margin-left: 101px;
+       font-size: 27px;
+     } */
+   }
+
+   @media(max-width:767px){
+    .fa-bars:before {
+     margin-right: 3vw;
+     font-size: 7vw;
+   }
+   .fa, .fas {
+     margin-top: 10vw;
+   }
+   .navbar .logo a {
+     margin-left: 3vw;
+     font-size: 27px;
+   }
+   .logo{
+     margin-top: 10vw;
+   
+   }
+  }

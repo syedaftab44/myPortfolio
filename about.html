@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aboput</title>
+    <link rel="stylesheet" href="./stylesheet/utility.css">
+    <link rel="stylesheet" href="./stylesheet/about.css">
+    <link rel="stylesheet" href="./stylesheet/loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+</head>
+
+<body>
+    <div id="main">
+        <div id="loader"></div>
+
+        <nav class="navbar">
+            <div class="content">
+                <div class="logo">
+                    <a href="#">Aftab Hashmi</a>
+                </div>
+                <div class="menu-list" id="middle">
+                    <h3>Currently Design <br>
+                        Engineer at Sheryians</h3>
+                    <h3>Based in Bhopal</h3>
+                </div>
+                <ul class="menu-list text">
+
+                    <div class="icon cancel-btn">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <li class="textline"><a href="./index.html">Home</a>
+                        <div class="line"></div>
+
+                    </li>
+                    <li class="textline"><a href="./work.html">Work</a>
+                        <div class="line"></div>
+
+                    </li>
+                    <li class="textline"><a href="./about.html">About</a>
+                        <div class="line"></div>
+                    </li>
+                    <li class="textline"><a href="./contact.html">Contact</a>
+                        <div class="line"></div>
+                    </li>
+                </ul>
+                <div class="icon menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+        <div id="about-p1">
+            <div class="container" id="p1-top">
+                <div class="textdiv">
+                    <div class="text">
+                        <h1>PASSIONATE</h1>
+                        <h1>CREATIVE</h1>
+                        <h1>DEVELOPER</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="p1-bottom">
+                <img src="./images/about-cover.jpg" alt="">
+
+            </div>
+        </div>
+        <div id="about-p2">
+            <div id="about-p2-top">
+                <h1>BASED IN
+                    <br>
+                    Bhopal
+                </h1>
+            </div>
+            <div  id="about-p2-bottom">
+                <h3>A journey of curosity <br>
+                    and explorations
+                </h3>
+                <div id="p2-bottom-text">
+                    <h3>I'm a creative developer with</h3>
+                    <h3>years of experience in building</h3>
+                    <h3>products and appealing web</h3>
+                    <h3>experiences.I've collaborated</h3>
+                    <h3>with individuals and teams to build</h3>
+                    <h3>experiences.</h3> <br>
+                    <h3>Each project is an opportunity to</h3>
+                    <h3>learn new concepts across</h3>
+                    <h3>multiple domains.</h3>
+                </div>
+            </div>
+
+        </div>
+        <div id="about-p3">
+            <div id="about-p3-container">
+                <h1>SERVICES</h1>
+                <div id="first" class="about-p3-box">
+                    <h3>Front end development / engineering</h3>
+                    <br><br>
+                    <h3>I plan, design, build, test and maintain scalable front end web applications.</h3>
+                    <br>
+                    <div id="fline" class="p3-line"></div>
+                </div>
+                <div id="second" class="about-p3-box">
+                    <h3>Interaction design / animation</h3>
+                    <br><br>
+                    <h3>I collaborate with designer to plan and execute
+                        <br>
+                        Interactions / animations on web applications addEventListener
+                        <br>
+                        design systems.
+                    </h3>
+                    <div id="sline" class="p3-line"></div>
+
+                </div>
+                <div id="third" class="about-p3-box">
+                    <h3>Creative implementation</h3>
+                    <br><br>
+                    <h3>I build layouts and interactions optimizing for
+                        <br>
+                        performance and usabilty
+                    </h3>
+                    <div id="tline" class="p3-line"></div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+        integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"
+        integrity="sha512-A64Nik4Ql7/W/PJk2RNOmVyC/Chobn5TY08CiKEX50Sdw+33WTOpPJ/63bfWPl0hxiRv1trPs5prKO8CpA7VNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./javascript/nav.js"></script>
+    <script src="./javascript/about.js"></script>
+    <script src="./javascript/loader.js"></script>
+
+    <script>
+        document.querySelectorAll(".textline")
+            .forEach(function (text) {
+                text.addEventListener("mouseenter", function (dets) {
+                    gsap.to(dets.target.children[1], {
+                        width: "100%",
+                        ease: Expo.easeInOut,
+                        duration: .8
+                    })
+
+                })
+
+                text.addEventListener("mouseleave", function (dets) {
+                    gsap.to(dets.target.children[1], {
+                        width: "0%",
+                        left: "100%",
+                        ease: Expo.easeInOut,
+                        duration: .8,
+                        onComplete: function () {
+                            dets.target.children[1].style.left = "0"
+                        }
+                    })
+                })
+            });
+
+    </script>
+</body>
+
+</html>
