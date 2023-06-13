@@ -31,7 +31,6 @@ body {
      padding: 1.5vw 0;
      transition: all 0.3s ease;
      background-color: #000;
-     
    }
    /* .navbar.sticky{
      background: #1b1b1b;
@@ -163,12 +162,11 @@ body {
 
    @media(max-width:767px){
     .fa-bars:before {
-     margin-right: 3vw;
+     margin-right: 2vw;
      font-size: 7vw;
    }
    .fa, .fas {
-     /* margin-top: 10vw; */
-     padding: 3vw;
+     padding: 1vw;
 
    }
    .navbar .logo a {
@@ -176,8 +174,7 @@ body {
      font-size: 27px;
    }
    .logo{
-     /* margin-top: 10vw; */
-     padding: 3vw;
+     padding: 1vw;
    
    }
    .line{
